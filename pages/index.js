@@ -7,17 +7,6 @@ import { useRouter } from 'next/router';
 export default function Home() {
   const router = useRouter();
 
-  useEffect(() => {
-    const { code } = router.query;
-
-    if (code) {
-      const linkElement = document.getElementById('redirect-link');
-      if (linkElement) {
-        linkElement.click();
-      }
-    }
-  }, [router.query]);
-
   const getFullUrl = (code) => {
     const baseUrl = 'https://d26paarabrky6y.cloudfront.net/';
     return `${baseUrl}?code=${code}`;
