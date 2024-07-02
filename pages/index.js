@@ -8,7 +8,8 @@ export default function Home() {
 
   const getFullUrl = (code) => {
     const baseUrl = 'https://d26paarabrky6y.cloudfront.net';
-    return decodeURIComponent(`${baseUrl}${code.asPath}`);
+    console.log(code);
+    return decodeURIComponent(`${baseUrl}${code}`);
   };
 
   return (
