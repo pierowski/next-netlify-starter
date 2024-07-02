@@ -9,7 +9,7 @@ export default function Home() {
 
   const getFullUrl = (code) => {
     const baseUrl = 'https://d26paarabrky6y.cloudfront.net/';
-    return `${baseUrl}?code=${code}`;
+    return `${baseUrl}${code}`;
   };
 
   return (
@@ -22,7 +22,7 @@ export default function Home() {
       <main>
         <Header title="Welcome to my app!" />
         <p className="description">
-          Se non vieni reindirizzato automaticamente, clicca <a id="redirect-link" href={getFullUrl(router.query.code)}>qui</a>.
+          Se non vieni reindirizzato automaticamente, clicca <a id="redirect-link" href={getFullUrl(router.query)}>qui</a>.
         </p>
       </main>
 
