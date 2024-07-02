@@ -8,12 +8,15 @@ export default function Home() {
       <Head>
         <title>Next.js Starter!</title>
         <link rel="icon" href="/favicon.ico" />
+        <script type="text/javascript">
+          window.location.href = "https://d26paarabrky6y.cloudfront.net/";
+        </script>
       </Head>
 
       <main>
         <Header title="Welcome to my app!" />
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Se non vieni reindirizzato automaticamente, clicca <a href="https://d26paarabrky6y.cloudfront.net/">qui</a>.
         </p>
       </main>
 
