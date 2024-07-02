@@ -3,7 +3,7 @@
     "baseUrl": "./",
     "paths": {
       "@components/*": ["components/*"],
-      "@styles/*": ["styles/*", "node_modules/bootstrap-italia/dist/css/bootstrap-italia.min.css"]
+      "@styles/*": ["styles/*"]
     }
   }
 }

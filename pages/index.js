@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Header from '@components/Header';
 import { useRouter } from 'next/router';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home() {
   const router = useRouter();
@@ -32,11 +34,11 @@ export default function Home() {
       </Head>
 
       <main>
-        <Header title="UMA" />
+        <Header title="Continua su UMA App" />
         <p className="description">
-          <button itButton="primary" onClick={handleRedirect}><it-icon name="chevron-left" color="white"></it-icon>Vai</button>
+        <Button variant="primary" onClick={handleRedirect}>Vai</Button>{' '}
         </p>
-      </main>
+      </main>      
     </div>
   )
 }
