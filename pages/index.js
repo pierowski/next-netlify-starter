@@ -6,10 +6,18 @@ import { useRouter } from 'next/router';
 export default function Home() {
   const router = useRouter();
 
-  const getFullUrl = (code) => {
-    const baseUrl = 'https://d26paarabrky6y.cloudfront.net';
-    console.log(code);
-    return decodeURIComponent(`${baseUrl}${code}`);
+  const getFullUrl = (params) => {
+    const baseUrl = 'https://d26paarabrky6y.cloudfront.net/';
+    let paramsString = '?';
+
+    Object.entries(params).forEach((param) => {
+      paramsString += param + '=' + params[param] + '&';
+    });
+
+    paramsString = paramsString.substring(0, paramsString.length - 2);
+    console.log(paramsString);
+
+    return decodeURIComponent(`${baseUrl}${paramsString}`);
   };
 
   return (
