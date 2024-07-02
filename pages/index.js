@@ -27,14 +27,14 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>UMA</title>
+        <title>Continua su UMA App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <Header title="UMA" />
         <p className="description">
-          <button itButton="primary" onClick={handleRedirect}><it-icon name="chevron-left" color="white"></it-icon>Ritorna nell'app</button>
+          <button itButton="primary" onClick={handleRedirect}><it-icon name="chevron-left" color="white"></it-icon>Vai</button>
         </p>
       </main>
     </div>
