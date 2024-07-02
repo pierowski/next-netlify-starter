@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Header from '@components/Header';
-import Footer from '@components/Footer';
 import { useRouter } from 'next/router';
 
 export default function Home() {
@@ -35,11 +34,9 @@ export default function Home() {
       <main>
         <Header title="UMA" />
         <p className="description">
-          <button onClick={handleRedirect}>Clicca per tornare su UMA</button>
+          <button itButton="primary" onClick={handleRedirect}><it-icon name="chevron-left" color="white"></it-icon>Ritorna nell'app</button>
         </p>
       </main>
-
-      <Footer />
     </div>
   )
 }
