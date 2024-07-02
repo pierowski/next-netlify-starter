@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 
 export default function Home() {
   const router = useRouter();
@@ -21,21 +20,22 @@ export default function Home() {
     return decodeURIComponent(`${baseUrl}${paramsString}`);
   };
 
-  useEffect(() => {
-    document.getElementById('redirect-link')?.click();
-  }, [router.query]);
+  const handleRedirect = () => {
+    const fullUrl = getFullUrl(router.query);
+    window.location.href = fullUrl;
+  };
 
   return (
     <div className="container">
       <Head>
-        <title>Next.js Starter!</title>
+        <title>UMA</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <Header title="Welcome to my app!" />
+        <Header title="UMA" />
         <p className="description">
-          Se non vieni reindirizzato automaticamente, clicca <a id="redirect-link" href={getFullUrl(router.query)}>qui</a>.
+          <button onClick={handleRedirect}>Clicca per tornare su UMA</button>
         </p>
       </main>
 
