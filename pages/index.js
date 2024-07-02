@@ -9,7 +9,7 @@ export default function Home() {
 
   const getFullUrl = (code) => {
     const baseUrl = 'https://d26paarabrky6y.cloudfront.net/';
-    return `${baseUrl}${code}`;
+    return `${baseUrl}${JSON.stringify(code)}`;
   };
 
   return (
