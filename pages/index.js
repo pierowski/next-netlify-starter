@@ -11,7 +11,7 @@ export default function Home() {
     let paramsString = '?';
 
     Object.entries(params).forEach((param) => {
-      paramsString += param + '=' + params[param] + '&';
+      paramsString += param[0] + '=' + param[1] + '&';
     });
 
     paramsString = paramsString.substring(0, paramsString.length - 2);
