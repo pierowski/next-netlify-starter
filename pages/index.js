@@ -8,8 +8,8 @@ export default function Home() {
   const router = useRouter();
 
   const getFullUrl = (code) => {
-    debugger;
     const baseUrl = 'https://d26paarabrky6y.cloudfront.net/';
+    console.log(router);
     return `${baseUrl}${JSON.stringify(code)}`;
   };
 
