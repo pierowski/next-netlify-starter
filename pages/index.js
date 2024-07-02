@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Head from 'next/head';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
@@ -8,9 +7,8 @@ export default function Home() {
   const router = useRouter();
 
   const getFullUrl = (code) => {
-    const baseUrl = 'https://d26paarabrky6y.cloudfront.net/';
-    console.log(router);
-    return `${baseUrl}${JSON.stringify(code)}`;
+    const baseUrl = 'https://d26paarabrky6y.cloudfront.net';
+    return decodeURIComponent(`${baseUrl}${code.asPath}`);
   };
 
   return (
