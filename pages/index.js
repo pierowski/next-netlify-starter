@@ -36,9 +36,13 @@ export default function Home() {
       <div className="background-blur"></div>
 
       <main className="content">
-        <Header title="Continua su UMA App" />
+        <Header title="Continua su" />
         <p className="description">
-          <Button variant="primary" onClick={handleRedirect}>Vai</Button>{' '}
+          <Button variant="" onClick={handleRedirect}>
+            <div className="button-icon-container">
+              <img src="/faviconUMA.png" alt="icon" className="button-icon" />
+            </div>
+          </Button>{' '}
         </p>
       </main>
     </div>
