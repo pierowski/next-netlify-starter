@@ -33,12 +33,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <div className="background-blur"></div>
+
+      <main className="content">
         <Header title="Continua su UMA App" />
         <p className="description">
-        <Button variant="primary" onClick={handleRedirect}>Vai</Button>{' '}
+          <Button variant="primary" onClick={handleRedirect}>Vai</Button>{' '}
         </p>
-      </main>      
+      </main>
     </div>
   )
 }
