@@ -34,16 +34,17 @@ export default function Home() {
       </Head>
 
       <div className="background-blur"></div>
-
-      <main className="content">
-        <Header title="Continua su" />
-        <p className="description">
-          <Button variant="" onClick={handleRedirect}>
-            <div className="button-icon-container">
-              <img src="/faviconUMA.png" alt="icon" className="button-icon" />
-            </div>
-          </Button>{' '}
-        </p>
+      <main className="content flip-container">
+        <div className="flipper" onClick={handleRedirect}>
+          {/* Lato anteriore: Icona */}
+          <div className="front">
+            <img src="/faviconUMA.png" alt="icon" className="button-icon" />
+          </div>
+          {/* Lato posteriore: Testo */}
+          <div className="back">
+            <Header title="Entra" />
+          </div>
+        </div>
       </main>
     </div>
   )
