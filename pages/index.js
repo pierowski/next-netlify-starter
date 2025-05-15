@@ -26,7 +26,7 @@ export default function Home() {
   useEffect(() => {
     console.log(router);
     console.log(router.query);
-    if (router.isReady && Object.keys(router.query)[0] === 'sp') {
+    if (!router.query.code) {
       return decodeURIComponent('https://d26paarabrky6y.cloudfront.net/');
     }
   }, [router]);
