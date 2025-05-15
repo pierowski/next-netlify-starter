@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Header from '@components/Header';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
