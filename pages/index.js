@@ -26,7 +26,8 @@ export default function Home() {
   useEffect(() => {
     console.log(router);
     console.log(router.query);
-    if (!router.query.code) {
+    const isLogin = router.asPath.includes('?code=');
+    if (!isLogin) {
       return decodeURIComponent('https://d26paarabrky6y.cloudfront.net/');
     }
   }, [router]);
