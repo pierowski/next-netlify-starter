@@ -30,6 +30,13 @@ export default function Home() {
 
   };
 
+  // Redirect automatico all'app se non ci sono query params
+  useEffect(() => {
+    if (router.isReady && Object.keys(router.query).length === 0) {
+      window.location.href = 'https://d26paarabrky6y.cloudfront.net/';
+    }
+  }, [router]);
+
   const handleRedirect = () => {
     const fullUrl = getFullUrl(router.query);
     window.location.href = fullUrl;
