@@ -19,22 +19,8 @@ export default function Home() {
     paramsString = paramsString.substring(0, paramsString.length - 2);
     console.log(paramsString);
 
-    if (!params) {
-      return decodeURIComponent(`${baseUrl}`);
-    } else {
-      return decodeURIComponent(`${baseUrl}${paramsString}`);
-    }
+    return decodeURIComponent(`${baseUrl}${paramsString}`);
   };
-
-  // Redirect automatico all'app se non ci sono query params
-  useEffect(() => {
-    console.log(router);
-    console.log(router.query);
-    const isLogin = router.asPath.includes('?code=');
-    if (!isLogin) {
-      window.location.href = getFullUrl(router.query);
-    }
-  }, [router]);
 
   const handleRedirect = () => {
     const fullUrl = getFullUrl(router.query);
