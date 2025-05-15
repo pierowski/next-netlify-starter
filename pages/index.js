@@ -24,6 +24,8 @@ export default function Home() {
 
   // Redirect automatico all'app se non ci sono query params
   useEffect(() => {
+    console.log(router);
+    console.log(router.query);
     if (router.isReady && Object.keys(router.query).length === 0) {
       return decodeURIComponent('https://d26paarabrky6y.cloudfront.net/');
     }
