@@ -32,7 +32,7 @@ export default function Home() {
     console.log(router.query);
     const isLogin = router.asPath.includes('?code=');
     if (!isLogin) {
-      window.location.href = getFullUrl();
+      window.location.href = getFullUrl(router.query);
     }
   }, [router]);
 
