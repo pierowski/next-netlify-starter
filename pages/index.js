@@ -11,24 +11,15 @@ export default function Home() {
   const getFullUrl = (params) => {
     const baseUrl = 'https://d26paarabrky6y.cloudfront.net/';
     let paramsString = '?';
-    let isLogout = false;
 
     Object.entries(params).forEach((param) => {
-      if (param[0] !== 'code') {
-        isLogout = true;
-      }
       paramsString += param[0] + '=' + param[1] + '&';
     });
 
     paramsString = paramsString.substring(0, paramsString.length - 2);
     console.log(paramsString);
 
-    if (isLogout) {
-      return decodeURIComponent(`${baseUrl}`);
-    } else {
-      return decodeURIComponent(`${baseUrl}${paramsString}`);
-    }
-
+    return decodeURIComponent(`${baseUrl}${paramsString}`);
   };
 
   // Redirect automatico all'app se non ci sono query params
