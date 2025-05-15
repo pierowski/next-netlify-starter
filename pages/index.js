@@ -19,7 +19,11 @@ export default function Home() {
     paramsString = paramsString.substring(0, paramsString.length - 2);
     console.log(paramsString);
 
-    return decodeURIComponent(`${baseUrl}${paramsString}`);
+    if (!params) {
+      return decodeURIComponent(`${baseUrl}`);
+    } else {
+      return decodeURIComponent(`${baseUrl}${paramsString}`);
+    }
   };
 
   // Redirect automatico all'app se non ci sono query params
@@ -28,7 +32,7 @@ export default function Home() {
     console.log(router.query);
     const isLogin = router.asPath.includes('?code=');
     if (!isLogin) {
-      window.location.href = 'https://d26paarabrky6y.cloudfront.net/';
+      window.location.href = getFullUrl();
     }
   }, [router]);
 
