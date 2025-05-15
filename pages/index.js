@@ -28,7 +28,7 @@ export default function Home() {
     console.log(router.query);
     const isLogin = router.asPath.includes('?code=');
     if (!isLogin) {
-      return decodeURIComponent('https://d26paarabrky6y.cloudfront.net/');
+      window.location.href = 'https://d26paarabrky6y.cloudfront.net/';
     }
   }, [router]);
 
