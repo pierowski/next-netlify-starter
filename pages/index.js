@@ -8,6 +8,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Home() {
   const router = useRouter();
 
+  (function redirect() {
+    setTimeout(() => handleRedirect(), 2000);
+  })();
+
   const getFullUrl = (params) => {
     const baseUrl = 'https://d26paarabrky6y.cloudfront.net/';
     let paramsString = '?';
@@ -36,16 +40,7 @@ export default function Home() {
 
       <div className="background-blur"></div>
       <main className="content flip-container">
-        <div className="flipper" onClick={handleRedirect}>
-          {/* Lato anteriore: Icona */}
-          <div className="front">
-            <img src="/faviconUMA.png" alt="icon" className="button-icon" />
-          </div>
-          {/* Lato posteriore: Testo */}
-          <div className="back">
-            <Header title="Entra" />
-          </div>
-        </div>
+
       </main>
     </div>
   )
