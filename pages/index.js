@@ -43,7 +43,7 @@ export default function Home() {
           </div>
           {/* Lato posteriore: Testo */}
           <div className="back">
-            <Header title="Entra" />
+            <Header title="Prosegui" />
           </div>
         </div>
       </main>
