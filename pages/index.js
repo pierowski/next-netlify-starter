@@ -9,7 +9,7 @@ export default function Home() {
   const router = useRouter();
 
   const getFullUrl = (params) => {
-    const baseUrl = 'https://agricoltura-coll.regione.lazio.it/uma/assets/pages/mobile/';
+    const baseUrl = 'https://agricoltura-coll.regione.lazio.it/uma/';
     let paramsString = '?';
 
     Object.entries(params).forEach((param) => {
