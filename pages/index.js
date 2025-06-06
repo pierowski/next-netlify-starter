@@ -9,7 +9,7 @@ export default function Home() {
   const router = useRouter();
 
   const getFullUrl = (params) => {
-    const baseUrl = 'https://agricoltura-coll.regione.lazio.it/uma/home';
+    const baseUrl = 'https://d26paarabrky6y.cloudfront.net/';
     let paramsString = '?';
 
     Object.entries(params).forEach((param) => {
